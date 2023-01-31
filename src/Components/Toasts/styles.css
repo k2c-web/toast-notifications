@@ -5,19 +5,22 @@
   border: none;
   font-size: 20px;
   border-radius: 5px;
+  padding: 0;
+  margin: 0;
 }
 
 .toast-custom-content {
-  padding: 20px;
-  background: steelblue;
+  padding: 8px;
+  background: rgb(213, 213, 213);
   border-radius: 5px;
 }
 
 .toast-type-buttons {
   margin: 20px 0 0 0;
   padding: 20px 0 60px 0;
-  background: rgb(213, 213, 213);
   border-radius: 5px;
+  background: rgb(213, 213, 213);
+  color: #213547;
 }
 
 .toast-type-buttons ul {
@@ -29,8 +32,8 @@
 }
 
 .toast-type-buttons ul li {
-  height: 50px;
-  line-height: 50px;
+  height: 60px;
+  line-height: 60px;
   cursor: pointer;
   opacity: 0.8;
   transition: all 0.3s;
@@ -111,6 +114,5 @@
   .toast-type-buttons ul {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-gap: 20px;
   }
 }
