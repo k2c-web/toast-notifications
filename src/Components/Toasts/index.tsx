@@ -51,10 +51,11 @@ const Toasts = () => {
 
   return (
     <div className="toast-main-container">
-      <h1>Toasts :</h1>
+      <h1>Toast :</h1>
       <p>
-        Rapide de message de notification à l'intention de l'utilisateur d'une
-        application, concernant le succès ou l'échec d'une opération effectuée
+        Rapide message de notification à l'intention de l'utilisateur d'une
+        application, concernant le succès ou l'échec à la fin d'une opération
+        qui vient d'être effectuée
       </p>
       <div className="toast-custom-content">
         <input
