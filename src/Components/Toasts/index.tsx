@@ -1,5 +1,5 @@
 import { useToasts } from './ToastsContext'
-import { useState } from 'react'
+import { ChangeEvent, useState } from 'react'
 
 import './styles.css'
 
@@ -34,20 +34,27 @@ const Toasts = () => {
   const [customMessage, setCustomMessage] = useState('')
   const { pushToast } = useToasts()
   const handleClick = (e: React.MouseEvent<HTMLElement>) => {
+    //Retrieve the data of the message with data-type html attribute
     const [currentToast] = samples.filter(
-      (i) => i.type === e.target.dataset.type,
+      (i) => i.type === e.target.dataset.type, // TO DO
     )
     // Clone before change to preserve original datas
     const newest = { ...currentToast }
+
+    // If custom message detected overide the content of the toast
     if (!!customMessage) {
       newest.title = ''
       newest.content = customMessage
       setCustomMessage('')
     }
 
+    // Trigger toast with the relevant content according to the state of the application
     pushToast(!!customMessage ? newest : currentToast)
   }
-  const handleChange = (e) => setCustomMessage(e.target.value)
+
+  // Handle input change
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) =>
+    setCustomMessage(e.target.value)
 
   return (
     <div className="toast-main-container">

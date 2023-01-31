@@ -1,4 +1,4 @@
-import {
+import React, {
   createContext,
   useContext,
   useRef,
@@ -14,7 +14,7 @@ const defaultValue = {
 }
 
 type ContextProps = PropsWithChildren<{
-  className: string
+  children?: React.ReactNode
 }>
 
 type ToastType = {
