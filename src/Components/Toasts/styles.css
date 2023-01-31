@@ -7,14 +7,6 @@
   border-radius: 5px;
 }
 
-.toast-main-container button {
-  margin-right: 10px;
-}
-
-.toast-main-container button:last-of-type {
-  margin: 0;
-}
-
 .toast-custom-content {
   padding: 20px;
   background: steelblue;
@@ -23,13 +15,35 @@
 
 .toast-type-buttons {
   margin: 20px 0 0 0;
-  padding: 40px 0 60px 0;
-  background: silver;
+  padding: 20px 0 60px 0;
+  background: rgb(213, 213, 213);
   border-radius: 5px;
 }
 
+.toast-type-buttons ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toast-type-buttons ul li {
+  height: 50px;
+  line-height: 50px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: all 0.3s;
+  color: black;
+}
+
+.toast-type-buttons ul li:hover {
+  color: white;
+  opacity: 1;
+}
+
 .toast-type-buttons h2 {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .msg-danger {
@@ -92,5 +106,11 @@
 
   .toast-list li {
     padding: 0 1vw;
+  }
+
+  .toast-type-buttons ul {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 20px;
   }
 }

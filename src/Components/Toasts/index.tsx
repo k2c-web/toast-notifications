@@ -33,7 +33,7 @@ const samples = [
 const Toasts = () => {
   const [customMessage, setCustomMessage] = useState('')
   const { pushToast } = useToasts()
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const handleClick = (e: React.MouseEvent<HTMLElement>) => {
     const [currentToast] = samples.filter(
       (i) => i.type === e.target.dataset.type,
     )
@@ -67,16 +67,19 @@ const Toasts = () => {
       </div>
       <div className="toast-type-buttons">
         <h2>Type de toast ?</h2>
-        {samples.map((s) => (
-          <button
-            key={s.type}
-            onClick={handleClick}
-            data-type={s.type}
-            className={`msg-${s.type}`}
-          >
-            {s.type}
-          </button>
-        ))}
+        <p>Cliquez ci-dessous pour une démo</p>
+        <ul>
+          {samples.map((s) => (
+            <li
+              key={s.type}
+              onClick={handleClick}
+              data-type={s.type}
+              className={`msg-${s.type}`}
+            >
+              {s.type}
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   )
