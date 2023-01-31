@@ -1,0 +1,96 @@
+.toast-main-container .input-message-perso {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  border: none;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.toast-main-container button {
+  margin-right: 10px;
+}
+
+.toast-main-container button:last-of-type {
+  margin: 0;
+}
+
+.toast-custom-content {
+  padding: 20px;
+  background: steelblue;
+  border-radius: 5px;
+}
+
+.toast-type-buttons {
+  margin: 20px 0 0 0;
+  padding: 40px 0 60px 0;
+  background: silver;
+  border-radius: 5px;
+}
+
+.toast-type-buttons h2 {
+  margin-bottom: 40px;
+}
+
+.msg-danger {
+  border-color: red;
+  background-color: red;
+  color: whitesmoke;
+}
+
+.msg-success {
+  border-color: steelblue;
+  background-color: steelblue;
+  color: whitesmoke;
+}
+
+.msg-warning {
+  border-color: orange;
+  background-color: orange;
+  color: whitesmoke;
+}
+
+.msg-thankyou {
+  border-color: green;
+  background-color: green;
+  color: whitesmoke;
+}
+
+.toast-list {
+  box-sizing: border-box;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  right: 20px;
+  text-align: center;
+  width: 20vw;
+}
+
+.toast-list li {
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  width: 100%;
+  border: 1px dotted silver;
+  margin-bottom: 4px;
+}
+
+.toast-list h3 {
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .toast-list {
+    width: 100%;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+
+  .toast-list li {
+    padding: 0 1vw;
+  }
+}
